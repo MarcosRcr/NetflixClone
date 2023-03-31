@@ -1,7 +1,6 @@
 import useCurrentUser from "@/hooks/useCurrentUser";
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
-import iconprofile from '@/public/images/profile_red.png'
 import { useRouter } from "next/router";
 
 export async function getServerSideProps(context:NextPageContext) {
@@ -47,7 +46,7 @@ const { data: user } = useCurrentUser();
                              group-hover:cursor-pointer
                              group-hover:border-white
                              overflow-hidden">
-                                <img src={iconprofile} alt="Profile 1 Icon" />
+                                <img src="/images/profile_red.png" alt="Profile 1 Icon" />
                             </div>
 
                             <div className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
