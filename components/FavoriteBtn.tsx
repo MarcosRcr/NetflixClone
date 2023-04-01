@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useCallback, useMemo } from 'react';
-import { AiOutlinePlus, AiOutlineCheck } from 'react-icons/ai';
+import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
 
 import useCurrentUser from '@/hooks/useCurrentUser';
 import useFavorites from '@/hooks/useFavorite';
@@ -15,7 +15,7 @@ const FavoriteBtn: React.FC<FavoriteBtnProps> = ({ movieId }) => {
   const { data: currentUser, mutate } = useCurrentUser();
 
   const isFavorite = useMemo(() => {
-    const list = currentUser?.favoriteIds || [];
+    const list = currentUser?.favoritewIds || [];
 
     return list.includes(movieId);
   }, [currentUser, movieId]);
@@ -29,16 +29,16 @@ const FavoriteBtn: React.FC<FavoriteBtnProps> = ({ movieId }) => {
       response = await axios.post('/api/favorite', { movieId });
     }
 
-    const updatedFavoriteIds = response?.data?.favoriteIds;
+    const updatedFavoriteIds = response?.data?.favoritewIds;
 
     mutate({ 
       ...currentUser, 
-      favoriteIds: updatedFavoriteIds,
+      favoritewIds: updatedFavoriteIds,
     });
     mutateFavorites();
   }, [movieId, isFavorite, currentUser, mutate, mutateFavorites]);
   
-  const Icon = isFavorite ? AiOutlineCheck : AiOutlinePlus;
+  const Icon = isFavorite ? MdFavorite : MdFavoriteBorder;
 
   return (
     <div onClick={toggleFavorites} className="cursor-pointer group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300">
