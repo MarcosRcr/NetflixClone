@@ -2,6 +2,7 @@ import React from "react";
 
 import { FaPlay } from 'react-icons/fa'
 
+import FavoriteBtn from "./FavoriteBtn";
 interface MovieCardProps {
     data: Record<string, any>;
 
@@ -20,6 +21,7 @@ const MovieCard: React.FC<MovieCardProps>  = ({
                         <div className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-300" onClick={() => {}} >
                         <FaPlay size={15} />
                         </div>
+                        <FavoriteBtn movieId={data?.id}/>
                     </div>
                     <div className="flex flex-row mt-4 gap-2 items-center">
                         <p className="text-white text-[10px] lg:text-sm ">
