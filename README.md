@@ -42,6 +42,10 @@ pnpm dev
 
 This will start the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+## URL
+
+https://netflix-clone-by-marcos-cuellar.vercel.app/
+
 
 ![image](https://user-images.githubusercontent.com/104549435/229326080-e502e603-2663-467d-ba3b-db197a76d3ee.png)  ![image](https://user-images.githubusercontent.com/104549435/229326188-79b6cb4e-defb-403a-8155-0a9dfc7f4570.png) 
 
