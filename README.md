@@ -6,7 +6,7 @@ This is a Netflix clone built with Next.js, Tailwind CSS, and Prisma.
 
 To clone the repository, run the following command in your terminal:
 
-```sh
+
 git clone https://github.com/MarcosRcr/NetflixClone.git
 
 ## Installing dependencies
