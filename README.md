@@ -1,5 +1,9 @@
 # Netflix Clone (FullStack) Next.js, Tailwind CSS, and Prisma
 
+![image](https://user-images.githubusercontent.com/104549435/229325976-5e641430-2fee-4446-b258-11b3135ca086.png)
+![image](https://user-images.githubusercontent.com/104549435/229326003-b66899d4-3df8-4563-a2d9-ddab42234c52.png)
+
+
 This is a Netflix clone built with Next.js, Tailwind CSS, and Prisma.
 
 ## Cloning the repository
@@ -37,6 +41,11 @@ To start the app, run the following command in your terminal:
 pnpm dev
 
 This will start the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+![image](https://user-images.githubusercontent.com/104549435/229326080-e502e603-2663-467d-ba3b-db197a76d3ee.png)  ![image](https://user-images.githubusercontent.com/104549435/229326188-79b6cb4e-defb-403a-8155-0a9dfc7f4570.png) 
+
+![image](https://user-images.githubusercontent.com/104549435/229326280-325e5bda-4bef-4d28-ae22-47100b9bbf3c.png)
 
 
 
