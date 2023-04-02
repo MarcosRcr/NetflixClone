@@ -2,8 +2,10 @@ import React from "react";
 import { useRouter } from "next/router";
 
 import { FaPlay } from 'react-icons/fa'
+import { BsInfoLg } from 'react-icons/bs'
 
 import FavoriteBtn from "./FavoriteBtn";
+import useInfo from "@/hooks/useInfo";
 interface MovieCardProps {
     data: Record<string, any>;
 
@@ -13,6 +15,7 @@ const MovieCard: React.FC<MovieCardProps>  = ({
     data
 }) => {
     const router = useRouter();
+    const { openModal } = useInfo();
 
     return(
         <div className="group bg-zinc-900 col-span relative h-[12vw]">
@@ -26,6 +29,23 @@ const MovieCard: React.FC<MovieCardProps>  = ({
                         <FaPlay size={15} />
                         </div>
                         <FavoriteBtn movieId={data?.id}/>
+                        <div 
+                        onClick={() => openModal(data?.id)}
+                        className="
+                        cursor-pointer
+                         ml-auto 
+                         group/item 
+                         w-6 h-6 
+                         lg:w-10 lg:h-10
+                          border-white 
+                          border-2 
+                          rounded-full 
+                          flex 
+                          justify-center items-center 
+                          transition
+                           hover:border-neutral-300">
+                            <BsInfoLg className="text-white group-hover/item:text-neutral-300" size={25}/>
+                        </div>
                     </div>
                     <div className="flex flex-row mt-4 gap-2 items-center">
                         <p className="text-white text-[10px] lg:text-sm ">
